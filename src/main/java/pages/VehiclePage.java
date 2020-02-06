@@ -21,4 +21,7 @@ public class VehiclePage {
 		@FindBy (css = ".attrgroup:nth-of-type(2)>span")
 	})
 	public List<WebElement> attributesInfoList;
+
+	@FindBy (className = "price")
+	public WebElement priceInfo;
 }

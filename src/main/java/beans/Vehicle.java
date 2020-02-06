@@ -1,9 +1,8 @@
-package auto;
+package beans;
 
 public class Vehicle {
 
-	public static Long id;
-	
+	private long id;
 	private int year;
 	private String makeModel;
 	private int price;
@@ -11,19 +10,31 @@ public class Vehicle {
 	private String vin;
 	private String color;
 	private String title;
-	private String drive;
-	
+	private String drivetrain;
+	private String url;
+
 	public Vehicle() { }
-	
+
+	public Vehicle(String url) {
+		this.url = url;
+	}
+
 	public Vehicle(int year, String makeModel, int price) {
 		this.year = year;
 		this.makeModel = makeModel;
 		this.price = price;
 	}
-	
+
+	public Vehicle(long id, int year, String makeModel, int price) {
+		this.id = id;
+		this.year = year;
+		this.makeModel = makeModel;
+		this.price = price;
+	}
+
 	public Vehicle(int year, String makeModel, int price, 
 			int odometer, String vin, String color, 
-			String title, String drive) {
+			String title, String drivetrain) {
 		this.year = year;
 		this.makeModel = makeModel;
 		this.price = price;
@@ -31,7 +42,7 @@ public class Vehicle {
 		this.vin = vin;
 		this.color = color;
 		this.title = title;
-		this.drive = drive;
+		this.drivetrain = drivetrain;
 	}
 
 	@Override
@@ -43,9 +54,15 @@ public class Vehicle {
 				+ "VIN = " + vin + "\n"
 				+ "Color = " + color + "\n"
 				+ "Title = " + title + "\n"
-				+ "Drivetrain = " + drive;
+				+ "Drivetrain = " + drivetrain;
 	}
-	
+
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
 	public int getYear() {
 		return year;
 	}
@@ -88,10 +105,16 @@ public class Vehicle {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getDrive() {
-		return drive;
+	public String getDrivetrain() {
+		return drivetrain;
 	}
-	public void setDrive(String drive) {
-		this.drive = drive;
-	}	
+	public void setDrivetrain(String drivetrain) {
+		this.drivetrain = drivetrain;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 }
