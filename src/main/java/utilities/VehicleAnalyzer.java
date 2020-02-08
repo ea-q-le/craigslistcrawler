@@ -16,7 +16,7 @@ public class VehicleAnalyzer {
     public static boolean analyzeAndAdd(String currentUrl, String header, String price, String details) {
         getId(currentUrl);
 
-        if (isNew()) return false;
+        if (!isNew()) return false;
 
         Vehicle vehicle = getVehicleDetails(header, price, details);
         vehicles.add(0, vehicle);

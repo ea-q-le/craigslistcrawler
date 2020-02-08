@@ -11,39 +11,44 @@ import utilities.VehicleAnalyzer;
 
 public class MainTester {
 	public static void main(String[] args) {
-		
 		HomePage.goToHomePage();
 		new HomePage().carsTrucks4Sale.click();
-		
+
 		CarsTrucksPage page = new CarsTrucksPage();
-				
+
 		page.postedTodayCheckbox.click();
-		
+
+		do {
+			BrowserUtils.wait(15);
+			Driver.getDriver().navigate().refresh();
+//			page = new CarsTrucksPage();
 //System.out.println( page.nthAutoTitleText(2) );
 //System.out.println( page.nthAutoPriceText(2) );
 
-		for (int i = 1; i < 10; i++) {
-			page.nthAutoTitle(i).click();
+			for (int i = 1; i < 3; i++) {
+				page.nthAutoTitle(i).click();
 
-			String url = Driver.getDriver().getCurrentUrl();
+				String url = Driver.getDriver().getCurrentUrl();
 //		SendEmail.sendEmailTo("sean.gadimoff@gmail.com", subject, url);
-System.out.println(url);
+				System.out.println(url);
 
-			VehiclePage vehiclePage = new VehiclePage();
-			String header = vehiclePage.yearMakeModelInfo.getText();
-			String details = BrowserUtils
-					.webelementTextList(vehiclePage.attributesInfoList)
-					.toString();
-			String price = "$-1";
-			try { price = vehiclePage.priceInfo.getText(); } catch (NoSuchElementException e) {}
+				VehiclePage vehiclePage = new VehiclePage();
+				String header = vehiclePage.yearMakeModelInfo.getText();
+				String details = BrowserUtils.webelementTextList(vehiclePage.attributesInfoList).toString();
+				String price = "$-1";
+				try {
+					price = vehiclePage.priceInfo.getText();
+				} catch (NoSuchElementException e) {
+				}
 
 //			Vehicle vehicle = VehicleAnalyzer.getVehicleDetails(header, price, details);
-System.out.println(VehicleAnalyzer.analyzeAndAdd(
-		url,
-		header,
-		price,
-		details
-));
+				boolean toAddOrNotToAdd = VehicleAnalyzer.analyzeAndAdd(url, header, price, details);
+				if (!toAddOrNotToAdd) {
+					System.out.println("NOT adding the vehicle and breaking the loop for the next iteration...");
+					Driver.getDriver().navigate().back();
+					break;
+				}
+//System.out.println(VehicleAnalyzer.analyzeAndAdd(url, header, price, details));
 //System.out.println(vehicle.toString());
 System.out.println(header);
 System.out.println(details);
@@ -62,14 +67,17 @@ System.out.println(price);
 //System.out.println(VehicleAnalyzer.getId("https://washingtondc.craigslist.org/mld/ctd/d/fairfax-2011-volvo-xc70-lowest-prices/7070118114.html"));
 //		Driver.closeDriver();
 
-			Driver.getDriver().navigate().back();
-		}
+				Driver.getDriver().navigate().back();
+			}
 
-		for (Vehicle each : VehicleAnalyzer.getVehicles())
-			System.out.println(each.toString());
-		
-System.out.println("Great success!");
+			System.out.println("Vehicles size: " + VehicleAnalyzer.getVehicles().size());
 
+			for (Vehicle each : VehicleAnalyzer.getVehicles()) {
+				System.out.println(each.toString());
+			}
 
+			System.out.println("Great success!");
+
+		} while (true);
 	}
 }
