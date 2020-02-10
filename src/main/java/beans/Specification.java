@@ -1,5 +1,15 @@
 package beans;
 
+/**
+ * Specification bean assuming the following specifications
+ * to be defined in the specs file ('vehicle_specs.json'):
+ * - year from (int)
+ * - year to (int)
+ * - make and model (String)
+ * - max price (int)
+ *
+ * @author Shahin 'Sean' Gadimov
+ */
 public class Specification {
 	private int yearFrom;
 	private int yearTo;

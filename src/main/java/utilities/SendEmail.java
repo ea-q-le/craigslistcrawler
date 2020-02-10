@@ -13,6 +13,12 @@ import javax.mail.internet.MimeMessage;
 
 import utilities.ConfigReader;
 
+/**
+ * Email related utility class that utilizes javax.mail API
+ * and Gmail SMTP settings to send a simple MimeMessage.
+ *
+ * @author Shahin 'Sean' Gadimov
+ */
 public class SendEmail {
 	private final static String emailFrom;
 	private final static String username;
@@ -28,12 +34,8 @@ public class SendEmail {
 		properties = new Properties();
 		
 	}
-
-	public static void sendEmailTo(
-			String to,
-			String subject,
-			String body) {
-		
+//TODO -> remove print statements below after testing is complete
+	public static void sendEmailTo(String to, String subject, String body) {
 		setupEmailServer();
 		try {
 			Message message = new MimeMessage(session);

@@ -14,6 +14,13 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/**
+ * A singleton class that initializes the Driver
+ * based on the application configurations (see: 'application.config' file).
+ * Provides 'getDriver()' and 'closeDriver()' for initialization and closing.
+ *
+ * @author Shahin 'Sean' Gadimov
+ */
 public class Driver {
 	private Driver() {
 	}

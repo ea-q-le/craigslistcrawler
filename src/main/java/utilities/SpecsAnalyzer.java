@@ -10,7 +10,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import beans.Specification;
 import beans.Vehicle;
 
-public class SpecAnalyzer {
+/**
+ * Utility class that contains functions to analyze
+ * whether a given Vehicle object is being seeked for by the Client
+ * based on the 'vehicle_specs.json' file.
+ *
+ * @author Shahin 'Sean' Gadimov
+ */
+public class SpecsAnalyzer {
 	private static List<Specification> specs;
 	
 	static {

@@ -4,15 +4,12 @@ import beans.Specification;
 import beans.Vehicle;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.NoSuchElementException;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import pages.CarsTrucksPage;
@@ -20,7 +17,7 @@ import pages.HomePage;
 import pages.VehiclePage;
 import utilities.BrowserUtils;
 import utilities.Driver;
-import utilities.SpecAnalyzer;
+import utilities.SpecsAnalyzer;
 import utilities.VehicleAnalyzer;
 
 public class MainTester {
@@ -41,7 +38,7 @@ public class MainTester {
 	}
 	
 	private static boolean specAnalyzerTest(Vehicle vehicle) {
-		return SpecAnalyzer.matchesSpecification(vehicle);
+		return SpecsAnalyzer.matchesSpecification(vehicle);
 	}
 	
 	private static void jsonFileTest() {

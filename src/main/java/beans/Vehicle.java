@@ -1,5 +1,19 @@
 package beans;
 
+/**
+ * Vehicle bean assuming the following fields for a given vehicle:
+ * - id (long)
+ * - year (int)
+ * - make and model (String)
+ * - price (int)
+ * - odometer (int)
+ * - VIN (String)
+ * - title status (String)
+ * - drive-train (String)
+ * - URL (String)
+ *
+ * @author Shahin 'Sean' Gadimov
+ */
 public class Vehicle {
 
 	private long id;

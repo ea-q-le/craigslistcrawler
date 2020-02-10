@@ -16,6 +16,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/**
+ * Consists of common utility functions that can be handy for
+ * browser related manipulations.
+ *
+ * @author Shahin 'Sean' Gadiomov
+ */
 public class BrowserUtils {
 	public static final boolean ISWINDOWS;
 	public static final boolean ISMAC;
