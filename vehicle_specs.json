@@ -1,0 +1,20 @@
+[
+	{
+		"yearFrom" : 2005,
+		"yearTo" : 2015,
+		"makeOrModel" : "rav4",
+		"priceMax" : 10000
+	},
+	{
+		"yearFrom" : 2005,
+		"yearTo" : 2015,
+		"makeOrModel" : "highlander",
+		"priceMax" : 10000
+	},
+	{
+		"yearFrom" : 2005,
+		"yearTo" : 2015,
+		"makeOrModel" : "camry",
+		"priceMax" : 10000
+	}
+]

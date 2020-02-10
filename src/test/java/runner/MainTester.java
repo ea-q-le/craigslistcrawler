@@ -1,16 +1,67 @@
 package runner;
 
+import beans.Specification;
 import beans.Vehicle;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.NoSuchElementException;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import pages.CarsTrucksPage;
 import pages.HomePage;
 import pages.VehiclePage;
 import utilities.BrowserUtils;
 import utilities.Driver;
+import utilities.SpecAnalyzer;
 import utilities.VehicleAnalyzer;
 
 public class MainTester {
 	public static void main(String[] args) {
+		Vehicle good1 = new Vehicle(2005, "toyota Rav4", 10000);
+		Vehicle good2 = new Vehicle(2015, "Camry", 9999);
+		Vehicle bad1 = new Vehicle(2004, "rav4", 1000);
+		Vehicle bad2 = new Vehicle(2016, "rav4", 10000);
+		Vehicle bad3 = new Vehicle(2010, "highlander", 10001);
+		Vehicle bad4 = new Vehicle(2010, "ravv", 9000);
+		
+		System.out.println("Good: " + specAnalyzerTest(good1));
+		System.out.println("Good: " + specAnalyzerTest(good2));
+		System.out.println("Bad: " + specAnalyzerTest(bad1));
+		System.out.println("Bad: " + specAnalyzerTest(bad2));
+		System.out.println("Bad: " + specAnalyzerTest(bad3));
+		System.out.println("Bad: " + specAnalyzerTest(bad4));
+	}
+	
+	private static boolean specAnalyzerTest(Vehicle vehicle) {
+		return SpecAnalyzer.matchesSpecification(vehicle);
+	}
+	
+	private static void jsonFileTest() {
+		ObjectMapper om = new ObjectMapper();
+		List<Specification> specs = new ArrayList<Specification>();
+		try {
+			specs = om.readValue(new File("vehicle_specs.json"),
+					new TypeReference<List<Specification>>() {
+					});
+		} catch (Exception e) {
+			System.err.println("Ran into an EXCEPTION while deserializing");
+			e.printStackTrace();
+		}
+		
+		for (Specification each : specs)
+			System.out.println(each);
+	}
+	
+	private static void vehicleAnalysisTest() {
+		
 		HomePage.goToHomePage();
 		new HomePage().carsTrucks4Sale.click();
 
@@ -79,5 +130,6 @@ System.out.println(price);
 			System.out.println("Great success!");
 
 		} while (true);
+
 	}
 }
