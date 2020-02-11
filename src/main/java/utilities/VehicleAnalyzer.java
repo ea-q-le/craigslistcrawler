@@ -42,6 +42,7 @@ public class VehicleAnalyzer {
         if (!isNew()) return false;
 
         Vehicle vehicle = getVehicleDetails(header, price, details);
+        vehicle.setUrl(currentUrl);
         vehicles.add(0, vehicle);
 
         return true;

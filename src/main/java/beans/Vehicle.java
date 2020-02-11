@@ -63,7 +63,7 @@ public class Vehicle {
 	public String toString() {
 		return "Year = " + year + "\n"
 				+ "Make & model = " + makeModel + "\n" 
-				+ "Price = " + price + "\n"
+				+ "Price = $" + price + "\n"
 				+ "Odometer = " + odometer + "\n"
 				+ "VIN = " + vin + "\n"
 				+ "Color = " + color + "\n"

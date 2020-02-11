@@ -16,5 +16,17 @@
 		"yearTo" : 2015,
 		"makeOrModel" : "camry",
 		"priceMax" : 10000
+	},
+	{
+		"yearFrom" : 2005,
+		"yearTo" : 2015,
+		"makeOrModel" : "murano",
+		"priceMax" : 10000
+	},
+	{
+		"yearFrom" : 2005,
+		"yearTo" : 2015,
+		"makeOrModel" : "elantra",
+		"priceMax" : 10000
 	}
 ]
