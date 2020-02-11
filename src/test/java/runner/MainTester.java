@@ -32,8 +32,8 @@ public class MainTester {
 		do {
 			BrowserUtils.wait(60);
 			Driver.getDriver().navigate().refresh();
-
-			for (int i = 1; i < 6; i++) {
+			
+			for (int i = 1; i < 5; i++) {
 				page.nthAutoTitle(i).click();
 
 				String url = Driver.getDriver().getCurrentUrl();
@@ -56,7 +56,7 @@ public class MainTester {
 
 				Vehicle vehicle = VehicleAnalyzer.getVehicles().get(0);
 				if (SpecsAnalyzer.matchesSpecification(vehicle)) {
-					SendEmail.sendEmailTo("sean.gadimoff@gmail.com",
+					SendEmail.sendEmailTo("sean.gadimoff@gmail.com,alnam7@aol.com",
 						vehicle.getYear() + " " + vehicle.getMakeModel() + " $" + vehicle.getPrice(), 
 						vehicle.getUrl() + "\n\n" + vehicle.toString());
 System.out.println("Sent email with: " + vehicle.toString());

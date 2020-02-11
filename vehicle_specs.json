@@ -1,32 +1,140 @@
 [
 	{
-		"yearFrom" : 2005,
-		"yearTo" : 2015,
+		"yearFrom" : 2013,
+		"yearTo" : 2017,
 		"makeOrModel" : "rav4",
-		"priceMax" : 10000
+		"priceMax" : 9000
 	},
 	{
-		"yearFrom" : 2005,
-		"yearTo" : 2015,
-		"makeOrModel" : "highlander",
-		"priceMax" : 10000
+		"yearFrom" : 2008,
+		"yearTo" : 2010,
+		"makeOrModel" : "rogue",
+		"priceMax" : 2000
 	},
 	{
-		"yearFrom" : 2005,
-		"yearTo" : 2015,
-		"makeOrModel" : "camry",
-		"priceMax" : 10000
-	},
-	{
-		"yearFrom" : 2005,
-		"yearTo" : 2015,
+		"yearFrom" : 2008,
+		"yearTo" : 2010,
 		"makeOrModel" : "murano",
+		"priceMax" : 2000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "sorento",
+		"priceMax" : 6000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "santa fe",
+		"priceMax" : 7000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "santafe",
+		"priceMax" : 7000
+	},
+	{
+		"yearFrom" : 2010,
+		"yearTo" : 2012,
+		"makeOrModel" : "gx460",
+		"priceMax" : 12000
+	},
+	{
+		"yearFrom" : 2010,
+		"yearTo" : 2012,
+		"makeOrModel" : "gx 460",
+		"priceMax" : 12000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "sonata",
+		"priceMax" : 5000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "elantra",
+		"priceMax" : 4000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "optima",
+		"priceMax" : 4000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "crv",
+		"priceMax" : 8000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "cr-v",
+		"priceMax" : 8000
+	},
+	{
+		"yearFrom" : 2015,
+		"yearTo" : 2017,
+		"makeOrModel" : "cruze",
+		"priceMax" : 3000
+	},
+	{
+		"yearFrom" : 2012,
+		"yearTo" : 2014,
+		"makeOrModel" : "c-250",
+		"priceMax" : 6000
+	},
+	{
+		"yearFrom" : 2012,
+		"yearTo" : 2014,
+		"makeOrModel" : "c250",
+		"priceMax" : 6000
+	},
+	{
+		"yearFrom" : 2012,
+		"yearTo" : 2014,
+		"makeOrModel" : "c 250",
+		"priceMax" : 6000
+	},
+	{
+		"yearFrom" : 2010,
+		"yearTo" : 2015,
+		"makeOrModel" : "challenger",
+		"priceMax" : 7000
+	},
+	{
+		"yearFrom" : 2011,
+		"yearTo" : 2016,
+		"makeOrModel" : "charger",
+		"priceMax" : 7000
+	},
+	{
+		"yearFrom" : 2009,
+		"yearTo" : 2013,
+		"makeOrModel" : "mustang",
+		"priceMax" : 6000
+	},
+	{
+		"yearFrom" : 2010,
+		"yearTo" : 2013,
+		"makeOrModel" : "f150",
 		"priceMax" : 10000
 	},
 	{
-		"yearFrom" : 2005,
-		"yearTo" : 2015,
-		"makeOrModel" : "elantra",
+		"yearFrom" : 2010,
+		"yearTo" : 2013,
+		"makeOrModel" : "f-150",
+		"priceMax" : 10000
+	},
+	{
+		"yearFrom" : 2010,
+		"yearTo" : 2013,
+		"makeOrModel" : "f 150",
 		"priceMax" : 10000
 	}
 ]
